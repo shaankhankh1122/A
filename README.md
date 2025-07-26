@@ -30,7 +30,7 @@ cd messenger-bot
 ### 2. Install Dependencies
 
 ```bash
-npm install fca-uzair-sehar
+npm install fca-mtx-uzair 
 ```
 
 ### 3. Configure Your Login
