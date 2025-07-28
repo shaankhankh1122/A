@@ -7,9 +7,8 @@ module.exports.config = {
   name: "info",
   version: "1.2.6",
   hasPermssion: 0,
-  credits: "†『 ⸙ †ĸɩŋʛ ʋʑʌɩʀ ŋʋsʌɩɓʌ.𝐱͜͡ᴆ 』†",
+  credits: "Shaan",
   description: "info bot owner",
-  usePrefix: true,
   commandCategory: "Dành cho người dùng",
   hide:true,
   usages: "",
@@ -42,9 +41,9 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
     : global.config.PREFIX;
     const dateNow = Date.now();
     const time = process.uptime(),
-          hours = Math.floor(time / (60 * 60)),
-          minutes = Math.floor((time % (60 * 60)) / 60),
-          seconds = Math.floor(time % 60);
+                      hours = Math.floor(time / (60 * 60)),
+                      minutes = Math.floor((time % (60 * 60)) / 60),
+                      seconds = Math.floor(time % 60);
     const data = [
       "Bạn không thể tìm được lệnh admin tại 'help' của MintBot",
       "Đừng mong chờ gì từ MintBot.",
@@ -67,13 +66,13 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
       "MintBot cân spam nhưng không có gì đáng để bạn spam."
     ];
     var link = [
-      "https://imgur.com/03ueSvl.jpeg",
+      "https://i.imgur.com/Hp95vr5.jpeg",
     ];
 
     var i = 1;
     var msg = [];
     const moment = require("moment-timezone");
-    const date = moment.tz("Asia/Ho_Chi_minh").format("HH:MM:ss L");
+    const date = moment.tz("Asia/Karachi").format("HH:MM:ss L");
     for (const idAdmin of listAdmin) {
       if (parseInt(idAdmin)) {
         const name = await Users.getNameUser(idAdmin);
@@ -88,9 +87,7 @@ module.exports.run = async function ({ api, event, args, Users, permssion, getTe
                 }
             }
     var callback = () => 
-      api.sendMessage({ body: `🌹𝐀𝐃𝐌𝐈𝐍 𝐀𝐍𝐃 𝐁𝐎𝐓 𝐈𝐍FO 🌹
-◈─────────────────💙✨\n◈♪♪♪†『 ⸙ †ĸɩŋʛ ʋʑʌɩʀ.𝐱͜͡ᴆ 』†♪♪♪◈\n◈─────────────────💙✨\n» Prefix system: ${PREFIX}\n» Prefix box: ${prefix}\n» Modules: ${commands.size}\n» Ping: ${Date.now() - dateNow}ms\n» Total users: ${global.data.allUserID.length} \n» Total threads: ${global.data.allThreadID.length} ◈─────────────────💙✨\n╭───────────╮\n🌻   𝙤𝙬𝙣𝙚𝙧  ĸɩŋʛ   🌻\n╰───────────╯ ╭────────────╮\n🥀       (ʋʑʌɩʀ)          💞 \n╰────────────╯\n🍇ŋʋsʌɩɓʌ🍇\n◈─────────────────💙✨ https://www.facebook.com/profile.php?id=100076277285988\n◈─────────────────💙✨
-†『 ⸙ †ĸɩŋʛ ʋʑʌɩʀ ŋʋsʌɩɓʌ.𝐱͜͡ᴆ 』†`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
+      api.sendMessage({ body: `𝐀𝐃𝐌𝐈𝐍 𝐀𝐍𝐃 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎\n─────────────────\n» Prefix system: ${PREFIX}\n» Prefix box: ${prefix}\n» Modules: ${commands.size}\n» Ping: ${Date.now() - dateNow}ms\n» Total users: ${global.data.allUserID.length} \n» Total threads: ${global.data.allThreadID.length} ─────────────────\n╭───────────╮\n=𝐎𝐰𝐧𝐞𝐫 ➻     𝐌.𝐑 𝐒𝐇𝐀𝐀𝐍 \n╰───────────╯ ╭────────────╮\n𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐌.𝐑 𝐒𝐇𝐀𝐀𝐍 𝐁𝐎𝐓 \n╰────────────╯\n𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 𝐥𝐢𝐧𝐤 😊 𝐌.𝐑 𝐒𝐇𝐀𝐀𝐍 :- ☞\n──────────────────\nhttps://www.facebook.com/profile.php?id=100016828397863&mibextid=ZbWKwL\n─────────────────`, attachment: fs.createReadStream(__dirname + "/cache/kensu.jpg"), }, event.threadID, () => fs.unlinkSync(__dirname + "/cache/kensu.jpg"));
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname + "/cache/kensu.jpg")).on("close", () => callback()); 
   }
 };
