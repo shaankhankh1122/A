@@ -19,7 +19,7 @@ react.includes("@shankhank")) {
     var msg = {
         body: `ہـــمــــٓـــارا انـــٓـداز چـــٓــورا لـــٓـینـــے ســٓـے💄👑
 
-اپ ہــــمـٓــــارے جیسـٓـے نہیں ہـــٓــو سکـتـــے 💋🔥`,attachment: fs.createReadStream(__dirname + `/noprefix/10.mp3`)
+اپ ہــــمـٓــــارے جیسـٓـے نہیں ہـــٓــو سکـتـــے 💋🔥`,attachment: fs.createReadStream(__dirname + `/noprefix/1738754868473.jpg`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😻", event.messageID, (err) => {}, true)
