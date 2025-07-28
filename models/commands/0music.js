@@ -62,7 +62,7 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
         if (fs.statSync(path).size > 26214400) return api.sendMessage('Không thể gửi file vì dung lượng lớn hơn 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
         api.unsendMessage(handleReply.messageID)
         return api.sendMessage({ 
-            body: `🎶=====「 𝐌𝐔𝐒𝐈𝐂 」=====️🎶\n\n[📌] → 𝗧𝗶𝘁𝗹𝗲: ${data.title}\n[📻] → 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: ${data.author}\n[⏱️] → 𝐓𝐈𝐌𝐄 ${this.convertHMS(data.dur)}\n[👁️‍🗨️] → 𝘃𝗶𝗲𝘄: ${data.viewCount} 𝘃𝗶𝗲𝘄\n[❤️] → 𝐋𝐈𝐊𝐄𝐒: ${data.likes} 𝗹𝗶𝗸𝗲\n[⏱️] → 𝐓𝐈𝐌𝐄: ${Math.floor((Date.now()- data.timestart)/1000)} second\n\n       [ † 𓆩『 ⸙ † ᴛᴇʀɪ ᴅᴇᴡᴀɴɪ.𝐱͜͡ᴆ  』𓆪 †\n\n    ⇆ㅤㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤㅤ↻`,
+            body: `🎶=====「 𝐌𝐔𝐒𝐈𝐂 」=====️🎶\n\n[📌] → 𝗧𝗶𝘁𝗹𝗲: ${data.title}\n[📻] → 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: ${data.author}\n[⏱️] → 𝐓𝐈𝐌𝐄 ${this.convertHMS(data.dur)}\n[👁️‍🗨️] → 𝘃𝗶𝗲𝘄: ${data.viewCount} 𝘃𝗶𝗲𝘄\n[❤️] → 𝐋𝐈𝐊𝐄𝐒: ${data.likes} 𝗹𝗶𝗸𝗲\n[⏱️] → 𝐓𝐈𝐌𝐄: ${Math.floor((Date.now()- data.timestart)/1000)} second\n\n       [ † 𓆩『 ⸙ † 𝙱𝙾𝚃 𝙹𝚊𝚗𝚞 2.0  』𓆪 †\n\n    ⇆ㅤㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤㅤ↻`,
             attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
          event.messageID)
 
@@ -83,7 +83,7 @@ module.exports.run = async function ({ api, event, args }) {
             var data = await downloadMusicFromYoutube(args.join(" "), path);
             if (fs.statSync(path).size > 26214400) return api.sendMessage('Không thể gửi file vì dung lượng lớn hơn 25MB.', event.threadID, () => fs.unlinkSync(path), event.messageID);
             return api.sendMessage({ 
-                body: `🎶=====「 𝐌𝐔𝐒𝐈𝐂 」=====️🎶\n\n[📌] → 𝗧𝗶𝘁𝗹𝗲: ${data.title}\n[📻] → 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: ${data.author}\n[⏱️] → 𝗧𝗵𝗼̛̀𝗶 𝗴𝗶𝗮𝗻: ${this.convertHMS(data.dur)}\n[👁️‍🗨️] → 𝗟𝘂̛𝗼̛̣𝘁 𝘅𝗲𝗺: ${data.viewCount} 𝘃𝗶𝗲𝘄\n[❤️] → 𝗟𝘂̛𝗼̛̣𝘁 𝘁𝗵𝗶́𝗰𝗵: ${data.likes} 𝗹𝗶𝗸𝗲\n[⏱️] → 𝗧𝗵𝗼̛̀𝗶 𝗴𝗶𝗮𝗻 𝘅𝘂̛̉ 𝗹𝘆́: ${Math.floor((Date.now()- data.timestart)/1000)} 𝗴𝗶𝗮̂𝘆\n\n[ † 𓆩『 ⸙ † ᴛᴇʀɪ ᴅᴇᴡᴀɴɪ.𝐱͜͡ᴆ  』𓆪 † ]\n              ⇆ㅤㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤㅤ↻`,
+                body: `🎶=====「 𝐌𝐔𝐒𝐈𝐂 」=====️🎶\n\n[📌] → 𝗧𝗶𝘁𝗹𝗲: ${data.title}\n[📻] → 𝗖𝗵𝗮𝗻𝗻𝗲𝗹: ${data.author}\n[⏱️] → 𝗧𝗵𝗼̛̀𝗶 𝗴𝗶𝗮𝗻: ${this.convertHMS(data.dur)}\n[👁️‍🗨️] → 𝗟𝘂̛𝗼̛̣𝘁 𝘅𝗲𝗺: ${data.viewCount} 𝘃𝗶𝗲𝘄\n[❤️] → 𝗟𝘂̛𝗼̛̣𝘁 𝘁𝗵𝗶́𝗰𝗵: ${data.likes} 𝗹𝗶𝗸𝗲\n[⏱️] → 𝗧𝗵𝗼̛̀𝗶 𝗴𝗶𝗮𝗻 𝘅𝘂̛̉ 𝗹𝘆́: ${Math.floor((Date.now()- data.timestart)/1000)} 𝗴𝗶𝗮̂𝘆\n\n[ † 𓆩『 ⸙ † 𝙱𝙾𝚃 𝙹𝙰𝙽𝚄 2.0  』𓆪 † ]\n              ⇆ㅤㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤㅤ↻`,
                 attachment: fs.createReadStream(path)}, event.threadID, ()=> fs.unlinkSync(path), 
             event.messageID)
 
