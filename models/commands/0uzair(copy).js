@@ -1,9 +1,9 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "uzair rajput",
+  name: "Shaan",
     version: "1.1.1",
   hasPermssion: 0,
-  credits: "Uzair Rajput", 
+  credits: "Shaan", 
   description: "Just Respond",
   commandCategory: "no prefix",
     cooldowns: 5, 
@@ -12,10 +12,10 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
-  if(react.includes("kiran") ||
-     react.includes("Kiran") || react.includes("KIRAN") || react.includes("kìrâñ") ||
+  if(react.includes("Shaan") ||
+     react.includes("shan") || react.includes("SHAAN") || react.includes("SHANI") ||
 react.includes("admin ji") ||
-react.includes("@Kìrâñ RajPööt")) {
+react.includes("@shankhank")) {
     var msg = {
         body: `ہـــمــــٓـــارا انـــٓـداز چـــٓــورا لـــٓـینـــے ســٓـے💄👑
 
